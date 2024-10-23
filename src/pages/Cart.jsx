@@ -2,11 +2,19 @@ import React, { useState, useEffect } from "react";
 
 const Cart = () => {
   const [cartItems, setCartItems] = useState([]);
-
+  
+// apa tunafetch
   useEffect(() => {
     const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
-    setCartItems(storedCart); // inafetch from local storage
+    setCartItems(storedCart); 
   }, []);
+
+  const removeFromCart = (index) => {
+    let updatedCart = [...cartItems];
+    updatedCart.splice(index, 1); 
+    setCartItems(updatedCart); 
+    localStorage.setItem("cart", JSON.stringify(updatedCart)); 
+  };
 
   return (
     <div className="cart">
@@ -16,7 +24,10 @@ const Cart = () => {
       ) : (
         <ul>
           {cartItems.map((item, index) => (
-            <li key={index} style={{ display: "flex", alignItems: "center", marginBottom: "20px" }}>
+            <li key={index} style={{
+               display: "flex", 
+               alignItems: "center", 
+               marginBottom: "20px" }}>
               <img
                 src={item.image}
                 alt={item.title}
@@ -26,6 +37,11 @@ const Cart = () => {
                 <h4>{item.title}</h4>
                 <p>Price: ${item.price}</p>
               </div>
+              <button
+                onClick={() => removeFromCart(index)}
+              >
+                Delete
+              </button>
             </li>
           ))}
         </ul>

@@ -20,4 +20,12 @@
   .cart p {
     margin: 5px 0;
   }
-  
+  .button{
+
+      background-color: blue;
+      color: "white";
+      padding: "5px 10px";
+      margin-left: "auto";
+      cursor: "pointer";
+    
+  }

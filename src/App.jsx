@@ -16,14 +16,12 @@ function App() {
 <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
-            <Route index path="/landingpage" element={<LandingPage/>} />
+            <Route index path="/landingPage" element={<LandingPage/>} />
             <Route path="/registration" element={<RegistrationForm/>} />
             <Route path="/login" element={<LoginForm/>} />
             <Route path="/products" element={<Products/>} />
             <Route path="/AboutUs" element={<AboutUs/>} />
             <Route path="/cart" element={<Cart/>} />
-
-
 
           </Route>
         </Routes>

@@ -9,7 +9,7 @@ function Navbar() {
       <nav className="main-nav">
         <ul id="main-nav-ul">
           <li>
-            <Link to="/home">Home</Link>
+            <Link to="/landingPage">Home</Link>
           </li>
           <li>
             <Link to="/products">Products</Link>
