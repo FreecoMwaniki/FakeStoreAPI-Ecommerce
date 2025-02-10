@@ -1,9 +1,9 @@
 import React from 'react'
 import './landingPage.css'
 import hero from "../assets/online-shopping-shipping-internet-commerce-concept.jpg"
-import gifts from "../assets/gifts-golden-shopping-cart-with-copy-space.jpg"
-import wear from "../assets/pexels-solliefoto-298863.jpg"
-import shop from "../assets/download1.jpg"
+import gifts from "../assets/images.jpg"
+import wear from "../assets/sales-promotion-fashion-shopping-discount.jpg"
+import shop from "../assets/download.jpg"
 
 function LandingPage() {
   return (

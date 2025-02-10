@@ -17,7 +17,7 @@ function LoginForm() {
     if (registeredUser && (formData.emailOrUsername === registeredUser.email) && (formData.password === registeredUser.password)) {
       alert('Login successful!');
       // Redirection
-      navigate('/home');
+      navigate('/landingPage');
     } else {
       alert('Invalid credentials');
     }
